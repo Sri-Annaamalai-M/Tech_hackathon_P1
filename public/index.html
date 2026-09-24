@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SentinelFlow</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">AI-assisted security review</p>
+        <h1>SentinelFlow</h1>
+      </div>
+      <div class="health" id="health">Checking database</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel scan-list">
+        <div class="panel-header">
+          <div>
+            <h2>PR Scan History</h2>
+            <p>Recent webhook-triggered reviews and risk scores.</p>
+          </div>
+          <button id="refreshButton" type="button">Refresh</button>
+        </div>
+        <div id="scanList" class="scan-list-items"></div>
+      </section>
+
+      <section class="panel details">
+        <div id="scanDetails" class="empty-state">
+          Select a scan to inspect findings and remediation guidance.
+        </div>
+      </section>
+
+      <section class="panel trends">
+        <div class="panel-header">
+          <div>
+            <h2>Vulnerability Trends</h2>
+            <p>Daily category and severity rollups from stored scans.</p>
+          </div>
+        </div>
+        <div id="trendList" class="trend-list"></div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
